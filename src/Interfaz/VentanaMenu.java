@@ -28,6 +28,16 @@ public class VentanaMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         btnPersona = new javax.swing.JMenuItem();
@@ -37,12 +47,42 @@ public class VentanaMenu extends javax.swing.JFrame {
         btnAddEvento = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         btnRegistarCurso = new javax.swing.JMenuItem();
+        btnEditar = new javax.swing.JMenuItem();
+        DesercionCurso = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel4.setText("DD/MM/AAAA");
+        jLabel4.setToolTipText("");
+
+        jLabel5.setText("HH:MM am/pm");
+        jLabel5.setToolTipText("");
+
+        jTextField1.setText("Busqueda persona ID");
+
+        jButton1.setText("Agregar");
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Persona 1, 12:20 PM , motivo", "Persona 3, 2:00 PM , motivo" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jButton2.setText("Eliminar");
+
+        jLabel1.setText("Registro de entrada");
+
+        jLabel6.setText("Motivo ingreso");
+        jLabel6.setToolTipText("");
+
         jMenu1.setText("Persona");
 
-        btnPersona.setText("Registrar");
+        btnPersona.setText("Editar personas");
         btnPersona.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonaActionPerformed(evt);
@@ -50,7 +90,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         jMenu1.add(btnPersona);
 
-        btnIntereses.setText("Agregar intereses");
+        btnIntereses.setText("Intereses");
         btnIntereses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInteresesActionPerformed(evt);
@@ -62,7 +102,7 @@ public class VentanaMenu extends javax.swing.JFrame {
 
         btnActividad.setText("Actividades y eventos");
 
-        jMenuItem1.setText("Registrar actividad");
+        jMenuItem1.setText("Actividad");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -90,7 +130,41 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         jMenu2.add(btnRegistarCurso);
 
+        btnEditar.setText("Editar curso");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        jMenu2.add(btnEditar);
+
+        DesercionCurso.setText("Deserción");
+        DesercionCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DesercionCursoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(DesercionCurso);
+
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Empleados");
+
+        jMenuItem2.setText("Editar empleados");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
+        jMenuItem3.setText("Agregar puestos");
+        jMenu3.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Direcciones");
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -98,11 +172,48 @@ public class VentanaMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(35, 35, 35)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel6)
+                .addGap(3, 3, 3)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(21, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -121,7 +232,9 @@ public class VentanaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInteresesActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        JOptionPane.showInputDialog("Nombre de la actividad");
+        AddActividad addActividad = new AddActividad(this);
+        addActividad.setVisible(true);
+        this.setEnabled(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnAddEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEventoActionPerformed
@@ -136,19 +249,53 @@ public class VentanaMenu extends javax.swing.JFrame {
         this.setEnabled(false);
     }//GEN-LAST:event_btnRegistarCursoActionPerformed
 
+    private void DesercionCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DesercionCursoActionPerformed
+        SelectCurso selectCurso = new SelectCurso(this, "desercion");
+        selectCurso.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_DesercionCursoActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        AddEmpleado addEmpleado = new AddEmpleado(this);
+        addEmpleado.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        SelectCurso selectCurso = new SelectCurso(this, "editarCurso");
+        selectCurso.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnEditarActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem DesercionCurso;
     private javax.swing.JMenu btnActividad;
     private javax.swing.JMenuItem btnAddEvento;
+    private javax.swing.JMenuItem btnEditar;
     private javax.swing.JMenuItem btnIntereses;
     private javax.swing.JMenuItem btnPersona;
     private javax.swing.JMenuItem btnRegistarCurso;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JList jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,7 +34,6 @@ public class AddIntereses extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         idSelect1 = new javax.swing.JComboBox();
@@ -56,14 +55,7 @@ public class AddIntereses extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        btnAceptar.setText("Aceptar");
-        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAceptarActionPerformed(evt);
-            }
-        });
-
-        btnCancelar.setText("Cancelar");
+        btnCancelar.setText("Finalizar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
@@ -98,10 +90,7 @@ public class AddIntereses extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAceptar)
-                                .addGap(136, 136, 136)
-                                .addComponent(btnCancelar))
+                            .addComponent(btnCancelar)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(23, 23, 23)
@@ -137,24 +126,12 @@ public class AddIntereses extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAceptar)
-                    .addComponent(btnCancelar))
+                .addComponent(btnCancelar)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        ventanaMenu.setEnabled(true);
-        this.dispose();
-    }//GEN-LAST:event_btnAceptarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        ventanaMenu.setEnabled(true);
-        this.dispose();
-    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnAceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptar1ActionPerformed
         // TODO add your handling code here:
@@ -164,12 +141,16 @@ public class AddIntereses extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAceptar2ActionPerformed
 
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        ventanaMenu.setEnabled(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnAceptar1;
     private javax.swing.JButton btnAceptar2;
     private javax.swing.JButton btnCancelar;
