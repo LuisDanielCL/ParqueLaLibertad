@@ -96,14 +96,18 @@ public class SelectCurso extends javax.swing.JFrame {
         
         switch (opcion){
             case "desercion":
-                ventanaMenu.setEnabled(true);
                 VentanaDesercion ventanaDesercion = new VentanaDesercion(ventanaMenu);
                 ventanaDesercion.setVisible(true);
             break;
             case "editarCurso":
-                ventanaMenu.setEnabled(true);
                 AddCurso addCurso = new AddCurso(ventanaMenu, opcion);
                 addCurso.setVisible(true);
+            break;
+            case "desercionCurso":
+                ConsultaDesercion consultaDesercion = new ConsultaDesercion(ventanaMenu);
+                consultaDesercion.setVisible(true);
+            break;
+                
         }
         this.dispose();
         

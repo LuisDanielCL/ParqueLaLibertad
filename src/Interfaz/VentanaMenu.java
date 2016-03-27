@@ -51,8 +51,21 @@ public class VentanaMenu extends javax.swing.JFrame {
         DesercionCurso = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        btnAgregarPuestos = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        btnNacionalidad = new javax.swing.JMenuItem();
+        btnPais = new javax.swing.JMenuItem();
+        btnProvincia = new javax.swing.JMenuItem();
+        btnCanton = new javax.swing.JMenuItem();
+        btnAddDistrito = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        btnBusquedaDirecciones = new javax.swing.JMenuItem();
+        jbtBusquedaPersona = new javax.swing.JMenuItem();
+        btnDesercionPorCurso = new javax.swing.JMenuItem();
+        btnConsultaCursosActividadesEventos = new javax.swing.JMenuItem();
+        btnFiltrarEmpleado = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,7 +115,7 @@ public class VentanaMenu extends javax.swing.JFrame {
 
         btnActividad.setText("Actividades y eventos");
 
-        jMenuItem1.setText("Actividad");
+        jMenuItem1.setText("Actividades");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -110,7 +123,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         btnActividad.add(jMenuItem1);
 
-        btnAddEvento.setText("Registrar evento");
+        btnAddEvento.setText("Eventos");
         btnAddEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddEventoActionPerformed(evt);
@@ -158,13 +171,114 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem2);
 
-        jMenuItem3.setText("Agregar puestos");
-        jMenu3.add(jMenuItem3);
+        btnAgregarPuestos.setText("Agregar puestos");
+        btnAgregarPuestos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarPuestosActionPerformed(evt);
+            }
+        });
+        jMenu3.add(btnAgregarPuestos);
 
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Direcciones");
+
+        btnNacionalidad.setText("Nacionalidad");
+        btnNacionalidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNacionalidadActionPerformed(evt);
+            }
+        });
+        jMenu4.add(btnNacionalidad);
+
+        btnPais.setText("País");
+        btnPais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaisActionPerformed(evt);
+            }
+        });
+        jMenu4.add(btnPais);
+
+        btnProvincia.setText("Provincia");
+        btnProvincia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProvinciaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(btnProvincia);
+
+        btnCanton.setText("Cantón");
+        btnCanton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCantonActionPerformed(evt);
+            }
+        });
+        jMenu4.add(btnCanton);
+
+        btnAddDistrito.setText("Distrito");
+        btnAddDistrito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddDistritoActionPerformed(evt);
+            }
+        });
+        jMenu4.add(btnAddDistrito);
+
         jMenuBar1.add(jMenu4);
+
+        jMenu5.setText("Consultas");
+
+        jMenuItem3.setText("Ingreso por fechas");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem3);
+
+        btnBusquedaDirecciones.setText("Busqueda por Dirección");
+        btnBusquedaDirecciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBusquedaDireccionesActionPerformed(evt);
+            }
+        });
+        jMenu5.add(btnBusquedaDirecciones);
+
+        jbtBusquedaPersona.setText("Busqueda de persona");
+        jbtBusquedaPersona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtBusquedaPersonaActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jbtBusquedaPersona);
+
+        btnDesercionPorCurso.setText("Deserciones por curso");
+        btnDesercionPorCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDesercionPorCursoActionPerformed(evt);
+            }
+        });
+        jMenu5.add(btnDesercionPorCurso);
+
+        btnConsultaCursosActividadesEventos.setText("Filtro: cursos, actividades y eventos");
+        btnConsultaCursosActividadesEventos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaCursosActividadesEventosActionPerformed(evt);
+            }
+        });
+        jMenu5.add(btnConsultaCursosActividadesEventos);
+
+        btnFiltrarEmpleado.setText("Empleado");
+        btnFiltrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarEmpleadoActionPerformed(evt);
+            }
+        });
+        jMenu5.add(btnFiltrarEmpleado);
+
+        jMenuBar1.add(jMenu5);
+
+        jMenu6.setText("Estadística");
+        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -184,7 +298,7 @@ public class VentanaMenu extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -267,6 +381,78 @@ public class VentanaMenu extends javax.swing.JFrame {
         this.setEnabled(false);
     }//GEN-LAST:event_btnEditarActionPerformed
 
+    private void btnAgregarPuestosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPuestosActionPerformed
+        AddPuestos addPuestos = new AddPuestos(this);
+        addPuestos.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnAgregarPuestosActionPerformed
+
+    private void btnNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNacionalidadActionPerformed
+        AddNacionalidad addNacionalidad = new AddNacionalidad(this);
+        addNacionalidad.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnNacionalidadActionPerformed
+
+    private void btnPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaisActionPerformed
+        AddPais addPais = new AddPais(this);
+        addPais.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnPaisActionPerformed
+
+    private void btnProvinciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProvinciaActionPerformed
+        AddProvincia addProvincia = new AddProvincia(this);
+        addProvincia.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnProvinciaActionPerformed
+
+    private void btnCantonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCantonActionPerformed
+        AddCanton addCanton = new AddCanton(this);
+        addCanton.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnCantonActionPerformed
+
+    private void btnAddDistritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDistritoActionPerformed
+        AddDistrito addDistrito = new AddDistrito(this);
+        addDistrito.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnAddDistritoActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        ConsultaFecha consultaFecha = new ConsultaFecha(this);
+        consultaFecha.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void btnBusquedaDireccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBusquedaDireccionesActionPerformed
+        ConsultaDireccion consultaDireccion = new ConsultaDireccion(this);
+        consultaDireccion.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnBusquedaDireccionesActionPerformed
+
+    private void jbtBusquedaPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtBusquedaPersonaActionPerformed
+        ConsultaPersona consultaPersona = new ConsultaPersona(this);
+        consultaPersona.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_jbtBusquedaPersonaActionPerformed
+
+    private void btnDesercionPorCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesercionPorCursoActionPerformed
+        SelectCurso selectCurso = new SelectCurso(this, "desercionCurso");
+        selectCurso.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnDesercionPorCursoActionPerformed
+
+    private void btnConsultaCursosActividadesEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaCursosActividadesEventosActionPerformed
+        CosultaCursoActividadEventoPorFecha consultaPorFecha = new CosultaCursoActividadEventoPorFecha(this);
+        consultaPorFecha.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnConsultaCursosActividadesEventosActionPerformed
+
+    private void btnFiltrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarEmpleadoActionPerformed
+        ConsultaEmpleados consultaEmpleado = new ConsultaEmpleados(this);
+        consultaEmpleado.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnFiltrarEmpleadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -274,10 +460,20 @@ public class VentanaMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem DesercionCurso;
     private javax.swing.JMenu btnActividad;
+    private javax.swing.JMenuItem btnAddDistrito;
     private javax.swing.JMenuItem btnAddEvento;
+    private javax.swing.JMenuItem btnAgregarPuestos;
+    private javax.swing.JMenuItem btnBusquedaDirecciones;
+    private javax.swing.JMenuItem btnCanton;
+    private javax.swing.JMenuItem btnConsultaCursosActividadesEventos;
+    private javax.swing.JMenuItem btnDesercionPorCurso;
     private javax.swing.JMenuItem btnEditar;
+    private javax.swing.JMenuItem btnFiltrarEmpleado;
     private javax.swing.JMenuItem btnIntereses;
+    private javax.swing.JMenuItem btnNacionalidad;
+    private javax.swing.JMenuItem btnPais;
     private javax.swing.JMenuItem btnPersona;
+    private javax.swing.JMenuItem btnProvincia;
     private javax.swing.JMenuItem btnRegistarCurso;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -290,6 +486,8 @@ public class VentanaMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -297,5 +495,6 @@ public class VentanaMenu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JMenuItem jbtBusquedaPersona;
     // End of variables declaration//GEN-END:variables
 }
