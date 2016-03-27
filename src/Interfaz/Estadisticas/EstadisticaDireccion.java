@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaz;
+package Interfaz.Estadisticas;
+
+import Interfaz.VentanaMenu;
 
 /**
  *
  * @author LuisDanielCL
  */
-public class ConsultaDireccion extends javax.swing.JFrame {
+public class EstadisticaDireccion extends javax.swing.JFrame {
 
     /**
-     * Creates new form ConsultaDireccion
+     * Creates new form EstadisticaDireccion
      */
     VentanaMenu ventanaMenu;
-    public ConsultaDireccion(VentanaMenu pVentanaMenu) {
+    public EstadisticaDireccion(VentanaMenu pVentanaMenu) {
         ventanaMenu = pVentanaMenu;
         initComponents();
     }
@@ -29,11 +31,6 @@ public class ConsultaDireccion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
-        idSelect5 = new javax.swing.JComboBox();
         idSelect3 = new javax.swing.JComboBox();
         idSelect2 = new javax.swing.JComboBox();
         idSelect4 = new javax.swing.JComboBox();
@@ -44,23 +41,10 @@ public class ConsultaDireccion extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-
-        jButton1.setText("Agregar");
-
-        jButton2.setText("Eliminar");
-
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Actividada 1", "Actividada 2", "Actividada 3", "Actividada 4" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        idSelect5 = new javax.swing.JComboBox();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        idSelect5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Distrito 1", "Distrito 2", "Distrito 3" }));
 
         idSelect3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Provincia 1", "Provincia 2", "Provincia 3" }));
 
@@ -107,12 +91,9 @@ public class ConsultaDireccion extends javax.swing.JFrame {
 
         jButton4.setText("Buscar");
 
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Persona 1", "Persona 2", "Persona 3", "Persona 4" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList2);
+        idSelect5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Distrito 1", "Distrito 2", "Distrito 3" }));
+
+        jLabel2.setText("Cantidad : 000");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,19 +111,20 @@ public class ConsultaDireccion extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(idSelect4, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(idSelect3, 0, 279, Short.MAX_VALUE)
+                            .addComponent(idSelect3, 0, 178, Short.MAX_VALUE)
                             .addComponent(idSelect2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(idSelect5, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnCancelar))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton4)
+                                .addGap(35, 35, 35)
+                                .addComponent(jLabel2)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -167,12 +149,12 @@ public class ConsultaDireccion extends javax.swing.JFrame {
                     .addComponent(idSelect5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jrDistrito))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
                 .addComponent(btnCancelar)
-                .addGap(18, 18, 18))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -182,14 +164,8 @@ public class ConsultaDireccion extends javax.swing.JFrame {
         jrProvincia.setSelected(false);
         jrCanton.setSelected(false);
         jrDistrito.setSelected(false);
-        
-        
-    }//GEN-LAST:event_jrPaisActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        ventanaMenu.setEnabled(true);
-        this.dispose();
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    }//GEN-LAST:event_jrPaisActionPerformed
 
     private void jrProvinciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrProvinciaActionPerformed
         jrPais.setSelected(false);
@@ -209,6 +185,11 @@ public class ConsultaDireccion extends javax.swing.JFrame {
         jrCanton.setSelected(false);
     }//GEN-LAST:event_jrDistritoActionPerformed
 
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        ventanaMenu.setEnabled(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -220,14 +201,9 @@ public class ConsultaDireccion extends javax.swing.JFrame {
     private javax.swing.JComboBox idSelect3;
     private javax.swing.JComboBox idSelect4;
     private javax.swing.JComboBox idSelect5;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList jList1;
-    private javax.swing.JList jList2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jrCanton;
     private javax.swing.JRadioButton jrDistrito;
     private javax.swing.JRadioButton jrPais;

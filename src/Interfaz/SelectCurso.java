@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import Interfaz.Consultas.ConsultaDesercion;
+
 /**
  *
  * @author LuisDanielCL

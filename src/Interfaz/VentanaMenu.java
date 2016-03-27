@@ -5,6 +5,13 @@
  */
 package Interfaz;
 
+import Interfaz.Consultas.ConsultaDireccion;
+import Interfaz.Consultas.ConsultaPersona;
+import Interfaz.Consultas.ConsultaFecha;
+import Interfaz.Consultas.CosultaCursoActividadEventoPorFecha;
+import Interfaz.Consultas.ConsultaEmpleados;
+import Interfaz.Estadisticas.EstadisticaDireccion;
+import Interfaz.Estadisticas.EstadisticaIngresos;
 import javax.swing.JOptionPane;
 
 /**
@@ -65,7 +72,14 @@ public class VentanaMenu extends javax.swing.JFrame {
         btnDesercionPorCurso = new javax.swing.JMenuItem();
         btnConsultaCursosActividadesEventos = new javax.swing.JMenuItem();
         btnFiltrarEmpleado = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
+        btnTop10Ingresos = new javax.swing.JMenu();
+        btnCantidadIngresos = new javax.swing.JMenuItem();
+        btnBusquedaDireccion = new javax.swing.JMenuItem();
+        btnCantidadEmpleados = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        btnTop5Actividades = new javax.swing.JMenuItem();
+        btnTop5CursosDemanda = new javax.swing.JMenuItem();
+        btnTop5Deserciones = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -277,8 +291,65 @@ public class VentanaMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu6.setText("Estadística");
-        jMenuBar1.add(jMenu6);
+        btnTop10Ingresos.setText("Estadística");
+
+        btnCantidadIngresos.setText("Cantidad de ingresos");
+        btnCantidadIngresos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCantidadIngresosActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(btnCantidadIngresos);
+
+        btnBusquedaDireccion.setText("Busqueda por dirección");
+        btnBusquedaDireccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBusquedaDireccionActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(btnBusquedaDireccion);
+
+        btnCantidadEmpleados.setText("Cantidad de empleados");
+        btnCantidadEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCantidadEmpleadosActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(btnCantidadEmpleados);
+
+        jMenuItem4.setText("Top 10 personas que más ingresan");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(jMenuItem4);
+
+        btnTop5Actividades.setText("Top 5 actividades con más demanda");
+        btnTop5Actividades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTop5ActividadesActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(btnTop5Actividades);
+
+        btnTop5CursosDemanda.setText("Top 5 cursos con más demanda");
+        btnTop5CursosDemanda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTop5CursosDemandaActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(btnTop5CursosDemanda);
+
+        btnTop5Deserciones.setText("Top 5 cursos con más deserciones");
+        btnTop5Deserciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTop5DesercionesActionPerformed(evt);
+            }
+        });
+        btnTop10Ingresos.add(btnTop5Deserciones);
+
+        jMenuBar1.add(btnTop10Ingresos);
 
         setJMenuBar(jMenuBar1);
 
@@ -453,6 +524,54 @@ public class VentanaMenu extends javax.swing.JFrame {
         this.setEnabled(false);
     }//GEN-LAST:event_btnFiltrarEmpleadoActionPerformed
 
+    private void btnCantidadIngresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCantidadIngresosActionPerformed
+        EstadisticaIngresos estadisticaIngresos = new EstadisticaIngresos(this);
+        estadisticaIngresos.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnCantidadIngresosActionPerformed
+
+    private void btnBusquedaDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBusquedaDireccionActionPerformed
+        EstadisticaDireccion estadisticaDireccion = new EstadisticaDireccion(this);
+        estadisticaDireccion.setVisible(true);
+        this.setEnabled(false);
+    }//GEN-LAST:event_btnBusquedaDireccionActionPerformed
+
+    private void btnCantidadEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCantidadEmpleadosActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "La cantidad de empleados es: 000");
+    }//GEN-LAST:event_btnCantidadEmpleadosActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "Las personas que más ingresan son:"
+                + "\nPersona 1"
+                + "\nPersona 3"
+                +"\nPersona 2"
+                +"\nPersona 4");
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void btnTop5ActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTop5ActividadesActionPerformed
+                JOptionPane.showMessageDialog(rootPane, "Las actividades con más demanda son:"
+                + "\nActividad 1"
+                + "\nActividad 3"
+                +"\nActividad 2"
+                +"\nActividad 4");
+    }//GEN-LAST:event_btnTop5ActividadesActionPerformed
+
+    private void btnTop5CursosDemandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTop5CursosDemandaActionPerformed
+                JOptionPane.showMessageDialog(rootPane, "Los cursos con más demanda son:"
+                + "\nCursos 1"
+                + "\nCursos 3"
+                +"\nCursos 2"
+                +"\nCursos 4");
+    }//GEN-LAST:event_btnTop5CursosDemandaActionPerformed
+
+    private void btnTop5DesercionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTop5DesercionesActionPerformed
+                JOptionPane.showMessageDialog(rootPane, "Los cursos con más deserción son:"
+                + "\nCursos 4"
+                + "\nCursos 2"
+                +"\nCursos 3"
+                +"\nCursos 1");
+    }//GEN-LAST:event_btnTop5DesercionesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -463,7 +582,10 @@ public class VentanaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem btnAddDistrito;
     private javax.swing.JMenuItem btnAddEvento;
     private javax.swing.JMenuItem btnAgregarPuestos;
+    private javax.swing.JMenuItem btnBusquedaDireccion;
     private javax.swing.JMenuItem btnBusquedaDirecciones;
+    private javax.swing.JMenuItem btnCantidadEmpleados;
+    private javax.swing.JMenuItem btnCantidadIngresos;
     private javax.swing.JMenuItem btnCanton;
     private javax.swing.JMenuItem btnConsultaCursosActividadesEventos;
     private javax.swing.JMenuItem btnDesercionPorCurso;
@@ -475,6 +597,10 @@ public class VentanaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem btnPersona;
     private javax.swing.JMenuItem btnProvincia;
     private javax.swing.JMenuItem btnRegistarCurso;
+    private javax.swing.JMenu btnTop10Ingresos;
+    private javax.swing.JMenuItem btnTop5Actividades;
+    private javax.swing.JMenuItem btnTop5CursosDemanda;
+    private javax.swing.JMenuItem btnTop5Deserciones;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -487,11 +613,11 @@ public class VentanaMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
